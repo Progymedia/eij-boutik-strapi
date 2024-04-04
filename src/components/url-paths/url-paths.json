@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_url_paths_url_paths",
+  "info": {
+    "displayName": "url_paths",
+    "icon": "stack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "page_URL": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

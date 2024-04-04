@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_paths_paths",
+  "info": {
+    "displayName": "Paths",
+    "icon": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "paths": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

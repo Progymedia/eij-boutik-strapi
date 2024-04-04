@@ -18,7 +18,7 @@
   "attributes": {
     "image_desktop": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "allowedTypes": [
         "images"
@@ -39,7 +39,7 @@
       "required": true,
       "unique": true
     },
-    "link_url": {
+    "ad_url": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -49,19 +49,9 @@
       "required": true,
       "unique": false
     },
-    "url_path": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
-      "unique": true,
-      "required": true
-    },
     "image_mobile": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "allowedTypes": [
         "images"
@@ -71,6 +61,15 @@
           "localized": false
         }
       }
+    },
+    "page_url": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
     }
   }
 }
