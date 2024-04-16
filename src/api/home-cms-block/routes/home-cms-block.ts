@@ -1,7 +1,0 @@
-/**
- * home-cms-block router
- */
-
-import { factories } from '@strapi/strapi';
-
-export default factories.createCoreRouter('api::home-cms-block.home-cms-block');
