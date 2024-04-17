@@ -39,19 +39,6 @@
         }
       },
       "type": "text"
-    },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
     }
   }
 }
