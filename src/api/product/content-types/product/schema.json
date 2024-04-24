@@ -1,0 +1,191 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Products",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "documents": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "long_description_en": {
+      "type": "text"
+    },
+    "long_description_fr": {
+      "type": "text"
+    },
+    "short_description_en": {
+      "type": "text"
+    },
+    "short_description_fr": {
+      "type": "text"
+    },
+    "features_en": {
+      "type": "text"
+    },
+    "features_fr": {
+      "type": "text"
+    },
+    "attribute_1_en": {
+      "type": "string"
+    },
+    "attribute_1_fr": {
+      "type": "string"
+    },
+    "value_1_en": {
+      "type": "string"
+    },
+    "value_1_fr": {
+      "type": "string"
+    },
+    "attribute_2_en": {
+      "type": "string"
+    },
+    "attribute_2_fr": {
+      "type": "string"
+    },
+    "value_2_en": {
+      "type": "string"
+    },
+    "value_2_fr": {
+      "type": "string"
+    },
+    "attribute_3_en": {
+      "type": "string"
+    },
+    "attribute_3_fr": {
+      "type": "string"
+    },
+    "value_3_en": {
+      "type": "string"
+    },
+    "value_3_fr": {
+      "type": "string"
+    },
+    "attribute_4_en": {
+      "type": "string"
+    },
+    "attribute_4_fr": {
+      "type": "string"
+    },
+    "value_4_en": {
+      "type": "string"
+    },
+    "value_4_fr": {
+      "type": "string"
+    },
+    "value_5_en": {
+      "type": "string"
+    },
+    "value_5_fr": {
+      "type": "string"
+    },
+    "attribute_6_en": {
+      "type": "string"
+    },
+    "attribute_6_fr": {
+      "type": "string"
+    },
+    "value_6_en": {
+      "type": "string"
+    },
+    "value_6_fr": {
+      "type": "string"
+    },
+    "attribute_7_en": {
+      "type": "string"
+    },
+    "attribute_7_fr": {
+      "type": "string"
+    },
+    "value_7_en": {
+      "type": "string"
+    },
+    "value_7_fr": {
+      "type": "string"
+    },
+    "attribute_8_en": {
+      "type": "string"
+    },
+    "attribute_8_fr": {
+      "type": "string"
+    },
+    "value_8_en": {
+      "type": "string"
+    },
+    "value_8_fr": {
+      "type": "string"
+    },
+    "attribute_9_en": {
+      "type": "string"
+    },
+    "attribute_9_fr": {
+      "type": "string"
+    },
+    "value_9_en": {
+      "type": "string"
+    },
+    "value_9_fr": {
+      "type": "string"
+    },
+    "attribute_10_en": {
+      "type": "string"
+    },
+    "attribute_10_fr": {
+      "type": "string"
+    },
+    "value_10_en": {
+      "type": "string"
+    },
+    "value_10_fr": {
+      "type": "string"
+    },
+    "attribute_5_en": {
+      "type": "string"
+    },
+    "attribute_5_fr": {
+      "type": "string"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "brand": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::brand.brand"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    }
+  }
+}
