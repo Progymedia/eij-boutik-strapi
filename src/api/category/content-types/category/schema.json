@@ -13,10 +13,12 @@
   "pluginOptions": {},
   "attributes": {
     "name_en": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "name_fr": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description_en": {
       "type": "text"
