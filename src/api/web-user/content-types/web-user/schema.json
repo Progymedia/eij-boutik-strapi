@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "web_users",
+  "info": {
+    "singularName": "web-user",
+    "pluralName": "web-users",
+    "displayName": "Web users",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "web_role": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::web-role.web-role"
+    },
+    "code": {
+      "type": "biginteger",
+      "required": true,
+      "unique": true
+    }
+  }
+}

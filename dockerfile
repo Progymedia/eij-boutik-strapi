@@ -57,6 +57,8 @@ WORKDIR /opt/app
 COPY --from=build /opt/app ./
 ENV PATH /opt/node_modules/.bin:$PATH
 
+RUN echo fs.inotify.max_user_watches=100000 >> /etc/sysctl.conf  # Set limit in container
+
 RUN chown -R node:node /opt/app
 USER node
 EXPOSE 1337

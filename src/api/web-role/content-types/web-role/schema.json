@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "web_roles",
+  "info": {
+    "singularName": "web-role",
+    "pluralName": "web-roles",
+    "displayName": "Web roles",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "capabilities": {
+      "displayName": "Capabilities",
+      "type": "component",
+      "repeatable": false,
+      "component": "capabilities.capabilities"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "customer",
+        "sales_rep"
+      ],
+      "required": true
+    }
+  }
+}

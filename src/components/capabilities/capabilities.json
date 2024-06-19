@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_capabilities_capabilities",
+  "info": {
+    "displayName": "Capabilities",
+    "icon": "shield",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "precise_inventory": {
+      "type": "boolean",
+      "required": true
+    },
+    "create_orders": {
+      "type": "boolean",
+      "required": true
+    },
+    "view_year_sales": {
+      "type": "boolean",
+      "required": true
+    },
+    "view_prices": {
+      "type": "boolean",
+      "required": true
+    },
+    "my_account_history": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "one-month",
+        "twelve-months"
+      ],
+      "required": true
+    },
+    "view_products": {
+      "type": "enumeration",
+      "enum": [
+        "all",
+        "authorized"
+      ],
+      "required": true
+    }
+  }
+}
