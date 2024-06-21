@@ -1,6 +1,16 @@
 # Creating multi-stage build for production
 FROM node:18-alpine as build
 RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev vips-dev git > /dev/null 2>&1
+
+ARG NPM_AUTH_TOKEN
+ENV NPM_AUTH_TOKEN=${NPM_AUTH_TOKEN}
+
+# Conditionally create .npmrc file only if NPM_AUTH_TOKEN is set
+RUN if [ -n "$NPM_AUTH_TOKEN" ]; then \
+    echo "//npm.pkg.github.com/:_authToken=$NPM_AUTH_TOKEN" > ~/.npmrc; \
+    fi
+RUN cat ~/.npmrc
+
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 
@@ -38,7 +48,7 @@ ENV BASE_URL=${BASE_URL}
 
 
 WORKDIR /opt/
-COPY package.json package-lock.json ./
+COPY package.json package-lock.json .npmrc ./
 RUN npm install -g node-gyp
 RUN npm config set fetch-retry-maxtimeout 600000 -g && npm install --only=production
 ENV PATH /opt/node_modules/.bin:$PATH
@@ -48,18 +58,28 @@ RUN npm run build
 
 # Creating final production image
 FROM node:18-alpine
+
+ARG USER_ID
+ENV USER_ID=${USER_ID}
+ARG GROUP_ID
+ENV GROUP_ID=${GROUP_ID}
+
 RUN apk add --no-cache vips-dev
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
+
+USER $USER_ID:$GROUP_ID
+
 WORKDIR /opt/
 COPY --from=build /opt/node_modules ./node_modules
 WORKDIR /opt/app
 COPY --from=build /opt/app ./
 ENV PATH /opt/node_modules/.bin:$PATH
 
+USER root:root
 RUN echo fs.inotify.max_user_watches=100000 >> /etc/sysctl.conf  # Set limit in container
+RUN chown -R $USER_ID:$GROUP_ID /opt/app
+USER $USER_ID:$GROUP_ID
 
-RUN chown -R node:node /opt/app
-USER node
 EXPOSE 1337
 CMD ["npm", "run", "start"]
