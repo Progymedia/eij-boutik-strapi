@@ -12,14 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name_en": {
-      "type": "string",
-      "required": true
-    },
-    "name_fr": {
-      "type": "string",
-      "required": true
-    },
     "description_en": {
       "type": "text"
     },
@@ -42,16 +34,34 @@
       "relation": "oneToOne",
       "target": "api::product.product"
     },
-    "parent": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::category.category"
-    },
     "sort_order": {
       "type": "integer"
     },
     "code_ad": {
       "type": "string"
+    },
+    "url_fr": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "url_en": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "parent": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "name_en": {
+      "type": "string",
+      "required": true
+    },
+    "name_fr": {
+      "type": "string",
+      "required": true
     }
   }
 }

@@ -23,9 +23,9 @@
       "target": "api::web-role.web-role"
     },
     "code": {
-      "type": "biginteger",
+      "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     }
   }
 }
