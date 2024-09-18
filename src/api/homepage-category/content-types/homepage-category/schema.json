@@ -4,50 +4,39 @@
   "info": {
     "singularName": "homepage-category",
     "pluralName": "homepage-categories",
-    "displayName": "Homepage categories",
-    "description": ""
+    "displayName": "Homepage Categories"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
-    "name": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
+    "name_en": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
+    },
+    "name_fr": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "href_en": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "href_fr": {
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "image": {
+      "allowedTypes": [
+        "images"
+      ],
       "type": "media",
       "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
-    "href": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
       "required": true
     }
   }

@@ -4,66 +4,64 @@
   "info": {
     "singularName": "homepage-banner",
     "pluralName": "homepage-banners",
-    "displayName": "Homepage banners",
-    "description": ""
+    "displayName": "Homepage Banners"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
-    "image": {
+    "href_en": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "href_fr": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "alt_name_en": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "alt_name_fr": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "image_en": {
+      "allowedTypes": [
+        "images"
+      ],
       "type": "media",
       "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
-    "alt_name": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
       "required": true
     },
-    "href": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
-    "image_mobile": {
+    "image_fr": {
+      "allowedTypes": [
+        "images"
+      ],
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": true
+    },
+    "image_mobile_en": {
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "image_mobile_fr": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

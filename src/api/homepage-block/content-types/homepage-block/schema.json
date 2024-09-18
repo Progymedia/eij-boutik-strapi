@@ -4,39 +4,49 @@
   "info": {
     "singularName": "homepage-block",
     "pluralName": "homepage-blocks",
-    "displayName": "Homepage blocks",
+    "displayName": "Homepage Blocks",
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
-    "href": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
-      "required": true
-    },
-    "image": {
-      "allowedTypes": [
-        "images"
-      ],
+    "image_en": {
       "type": "media",
       "multiple": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "image_fr": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "href_en": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "href_fr": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "alt_name_en": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "alt_name_fr": {
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }

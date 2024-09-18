@@ -26,6 +26,10 @@
       "type": "string",
       "required": true,
       "unique": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
     }
   }
 }
